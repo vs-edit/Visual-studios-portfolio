@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #f3f4f6;
+            background-image: linear-gradient(to bottom, #111111, #000000);
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .nav-link:hover {
+            color: #fcd34d;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #f59e0b;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 50;
+        }
+        .scroll-to-top.show {
+            display: block;
+            opacity: 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .card-shadow {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(253, 224, 71, 0.2), 0 4px 6px -2px rgba(253, 224, 71, 0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-black/50 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-center items-center py-4 px-6">
+            <nav class="flex space-x-6 font-medium">
+                <a href="#about" class="nav-link text-gray-300 hover:text-yellow-400 transition-colors duration-200">About</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-yellow-400 transition-colors duration-200">Skills</a>
+                <a href="#work" class="nav-link text-gray-300 hover:text-yellow-400 transition-colors duration-200">My Work</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-yellow-400 transition-colors duration-200">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home/Hero Section -->
+    <section id="home" class="pb-20 bg-transparent">
+        <!-- Banner Image -->
+        <div class="h-[250px] sm:h-[350px] md:h-[400px] w-full bg-cover bg-center relative" style="background-image: url('Black and Blue Modern Video Editor LinkedIn Banner.png'); background-position: center top;">
+        </div>
+
+        <div class="container mx-auto px-6 -mt-24 relative z-10 text-center">
+            <!-- Profile Picture -->
+            <img src="Profile.jpeg" alt="Profile Picture" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover mx-auto border-4 border-black shadow-lg fade-in">
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-gray-100 mt-4 fade-in">
+                Visual Studios
+            </h1>
+
+            <!-- Main Content Area with single column -->
+            <div class="flex flex-col items-center mt-12">
+                <div class="text-left bg-black p-8 rounded-xl shadow-lg border border-gray-900 card-shadow max-w-2xl mx-auto">
+                    <h2 class="text-2xl font-bold text-gray-100 mb-2">Crafting Visual Stories with Precision and Passion</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-4">
+                        Welcome to my portfolio! I'm Amol Sinha, a dedicated video editor with a knack for transforming raw footage into compelling stories. Explore my work and see how I can bring your vision to life.
+                    </p>
+                    <a href="#work" class="mt-8 inline-block bg-yellow-400 text-black font-semibold py-3 px-8 rounded-full shadow-md hover:bg-yellow-500 transition-colors duration-200">
+                        Explore My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-100 mb-6">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                I am a passionate video editor with a knack for visual storytelling. With a keen eye for detail and a love for motion graphics, I turn raw footage into compelling narratives. I believe every project is an opportunity to create something unique and memorable.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-neutral-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-100 mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="p-6 bg-black rounded-xl shadow-md card-shadow">
+                    <div class="text-4xl mb-4 text-yellow-400">🎬</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-100">Video Editing</h3>
+                    <p class="text-sm text-gray-300">Proficient in modern editing software and techniques.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl shadow-md card-shadow">
+                    <div class="text-4xl mb-4 text-yellow-400">✨</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-100">After Effects</h3>
+                    <p class="text-sm text-gray-300">Creating stunning visual effects and compositions.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl shadow-md card-shadow">
+                    <div class="text-4xl mb-4 text-yellow-400">🎨</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-100">Motion Graphics</h3>
+                    <p class="text-sm text-gray-300">Designing dynamic text and graphics animations.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl shadow-md card-shadow">
+                    <div class="text-4xl mb-4 text-yellow-400">🔊</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-100">Sound Design</h3>
+                    <p class="text-sm text-gray-300">Crafting immersive and impactful audio experiences.</p>
+                </div>
+                <div class="p-6 bg-black rounded-xl shadow-md card-shadow">
+                    <div class="text-4xl mb-4 text-yellow-400">🌈</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-100">Color Grading</h3>
+                    <p class="text-sm text-gray-300">Mastering color correction to set the perfect mood.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Work/Portfolio Section -->
+    <section id="work" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-100 text-center mb-12">My Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Project Card 1 -->
+                <a href="https://drive.google.com/file/d/1oTzDY1hMikBPu-UKL5BRBIqhehfVvAu1/view?usp=drive_link" target="_blank" class="block bg-neutral-900 rounded-xl overflow-hidden shadow-md card-shadow">
+                    <img src="https://placehold.co/600x400/222222/aaaaaa?text=Project+1" alt="Project 1" class="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105">
+                </a>
+                <!-- Project Card 2 -->
+                <a href="https://drive.google.com/file/d/1lpzZr2C0JHodVjLpolK3ivWYx2OSN3zi/view?usp=drive_link" target="_blank" class="block bg-neutral-900 rounded-xl overflow-hidden shadow-md card-shadow">
+                    <img src="https://placehold.co/600x400/222222/aaaaaa?text=Project+2" alt="Project 2" class="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105">
+                </a>
+                <!-- Project Card 3 -->
+                <a href="https://drive.google.com/file/d/1jVAnYyfrQ_MO-gGCtgat6UiKsJ3qrenG/view?usp=drive_link" target="_blank" class="block bg-neutral-900 rounded-xl overflow-hidden shadow-md card-shadow">
+                    <img src="https://placehold.co/600x400/222222/aaaaaa?text=Project+3" alt="Project 3" class="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105">
+                </a>
+                <!-- Project Card 4 -->
+                <a href="https://drive.google.com/file/d/1dPlp18rtFjS3eZe0QZYC1s0Y2O-LjOXB/view?usp=drive_link" target="_blank" class="block bg-neutral-900 rounded-xl overflow-hidden shadow-md card-shadow">
+                    <img src="https://placehold.co/600x400/222222/aaaaaa?text=Project+4" alt="Project 4" class="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-neutral-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-100 mb-6">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                Have a project in mind? Let's connect and create something amazing together.
+            </p>
+            <div class="flex flex-col items-center">
+                <a href="mailto:amolvisualz@gmail.com" class="bg-yellow-400 text-black font-semibold py-3 px-8 rounded-full shadow-md hover:bg-yellow-500 transition-colors duration-200">
+                    Send me an Email
+                </a>
+                <p class="text-gray-400 text-sm mt-4">amolvisualz@gmail.com</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 mt-4 text-gray-400">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/_visual.studios._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-yellow-400 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.646 1.632 4.794 4.85.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.632 4.646-4.794 4.794-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.646-1.632-4.794-4.794-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.632-4.646 4.794-4.794 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.62-6.98 6.98-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.2 4.358 2.62 6.78 6.98 6.98 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.62 6.98-6.98.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.358-2.62-6.78-6.98-6.98-1.28-.058-1.688-.072-4.947-.072zm0 8.938c-3.282 0-5.962 2.68-5.962 5.962s2.68 5.962 5.962 5.962 5.962-2.68 5.962-5.962-2.68-5.962-5.962-5.962zm0 9.762c-2.091 0-3.793-1.702-3.793-3.793s1.702-3.793 3.793-3.793 3.793 1.702 3.793 3.793-1.702 3.793-3.793 3.793zm6.495-9.981c-.563 0-1.02.457-1.02 1.02s.457 1.02 1.02 1.02 1.02-.457 1.02-1.02-.457-1.02-1.02-1.02z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div id="scrollToTopBtn" class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation for sections
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2 // Trigger when 20% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.classList.add('opacity-0'); // Initial state for fade-in
+            observer.observe(section);
+        });
+        
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        };
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
